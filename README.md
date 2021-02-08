@@ -1,6 +1,13 @@
+
 # GitHist
 
-**TODO: Add description**
+
+[![hex.pm](https://img.shields.io/badge/docs-hexpm-blue.svg)](https://hexdocs.pm/git_hist)
+[![hex.pm](https://img.shields.io/hexpm/v/git_hist.svg)](https://hex.pm/packages/git_hist)
+[![hex.pm](https://img.shields.io/hexpm/dt/git_hist.svg)](https://hex.pm/packages/git_hist)
+[![hex.pm](https://img.shields.io/hexpm/l/git_hist.svg)](https://hex.pm/packages/git_hist)
+[![github.com](https://img.shields.io/github/last-commit/balance-platform/git_hist.svg)](https://github.com/balance-platform/git_hist/commits/master)
+![Elixir CI](https://github.com/balance-platform/git_hist/workflows/Elixir%20CI/badge.svg)
 
 ## Installation
 
