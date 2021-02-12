@@ -1,6 +1,13 @@
 defmodule GitHist.Git do
   def file_commit_history(filepath) when is_binary(filepath) do
-    case System.cmd("git", ["log", "--pretty=oneline", "--author-date-order", "--date-order", "--", filepath]) do
+    case System.cmd("git", [
+           "log",
+           "--pretty=oneline",
+           "--author-date-order",
+           "--date-order",
+           "--",
+           filepath
+         ]) do
       {logs_string, 0} ->
         logs =
           logs_string
