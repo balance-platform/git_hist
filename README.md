@@ -33,7 +33,7 @@
     ...
     "JIRA-245 New method added - zar"
   ]
-
+  ```
 
 # Installation
 
