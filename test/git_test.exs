@@ -9,8 +9,8 @@ defmodule GitHist.GitTest do
       assert ["2b21c4e32321b83a51a277508f75b1c1c0c6fe85 First row" | _latest_commits] = list
     end
 
-    test "error: doesn't exist" do
-      assert {:error, _reason} = Git.file_commit_history("./test/unknown")
+    test "ok: doesn't exist, empty result" do
+      assert {:ok, []} = Git.file_commit_history("./test/unknown")
     end
   end
 end
