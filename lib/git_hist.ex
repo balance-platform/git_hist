@@ -29,14 +29,14 @@ defmodule GitHist do
 
   defmacro __using__(opts) do
     quote do
-      @params unquote(opts)
-      @filter_by_regex Keyword.get(@params, :filter_by_regex, ~r/.*/)
-      @file Keyword.get(@params, :file, __ENV__.file)
-      @commits GitHist.Git.file_commit_history(@file)
-
       def commit_history do
-        {:ok, commits} = @commits
-        Enum.filter(commits, &String.match?(&1, @filter_by_regex))
+        params = unquote(opts)
+        filter_by_regex = Keyword.get(params, :filter_by_regex, ~r/.*/)
+        file = Keyword.get(params, :file, __ENV__.file)
+        commits = GitHist.Git.file_commit_history(file)
+
+        {:ok, commits} = commits
+        Enum.filter(commits, &String.match?(&1, filter_by_regex))
       end
     end
   end
