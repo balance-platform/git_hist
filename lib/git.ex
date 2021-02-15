@@ -1,7 +1,6 @@
 defmodule GitHist.Git do
   @moduledoc false
 
-
   def file_commit_history(filepath) when is_binary(filepath) do
     case System.cmd("git", [
            "log",
